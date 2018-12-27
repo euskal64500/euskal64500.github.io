@@ -1,10 +1,10 @@
 ---
 author: "Olivier"
 date: "2018-12-24"
-category: "Cooking"
-title: "Brioche recipe"
-description: "How to make delicious brioche"
-path: "/blog/cooking/brioche"
+category: "Electronics"
+title: "Prototype"
+description: "HPrototype of the LED sweater"
+path: "/blog/electronics/LED-sweater"
 ---
 
 Prototype

@@ -1,10 +1,10 @@
 ---
 author: "Olivier"
 date: "2018-12-24"
-category: "Cooking"
-title: "Brioche recipe"
+category: "Software"
+title: "React Js"
 description: "How to make delicious brioche"
-path: "/blog/cooking/brioche"
+path: "/blog/software/reactjs"
 ---
 
 Parts

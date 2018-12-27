@@ -1,10 +1,10 @@
 ---
 author: "Olivier"
 date: "2018-12-24"
-category: "Cooking"
-title: "Brioche recipe"
-description: "How to make delicious brioche"
-path: "/blog/cooking/brioche"
+category: "Software"
+title: "Python blog"
+description: "Python programming"
+path: "/blog/software/python"
 ---
 
 Parts
