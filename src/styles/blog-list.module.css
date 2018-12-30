@@ -1,0 +1,9 @@
+/*
+Color scheme dark horse: https://hookagency.com/website-color-schemes/
+*/
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

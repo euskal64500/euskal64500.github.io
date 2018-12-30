@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 
-import './layout.css'
+import layoutStyles from '../styles/layout.module.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,20 +22,17 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-            backgroundColor: 'red'
-          }}
-        >
+      <div className={ layoutStyles.site }>
+        <div className={ layoutStyles.header }>
+          <Header
+            menuLinks={data.site.siteMetadata.menuLinks} 
+            siteTitle={data.site.siteMetadata.title}
+          />
+        </div>
+        <div className={ layoutStyles.content }>
           {children}
         </div>
-      </>
+      </div>
     )}
   />
 )

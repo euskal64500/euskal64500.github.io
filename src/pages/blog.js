@@ -1,31 +1,40 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import PostLink from "../components/post-link"
+import BlogMenu from "../components/blog-menu"
+import BlogList from "../components/blog-list"
+import blogStyles from '../styles/blog.module.css'
 
-const IndexPage = ({ edges }) => {
-  const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
-
-  return <div>{Posts}</div>
-};
 
 const BlogPage = ({
   data: {
-    allMarkdownRemark: { edges },
+    categories: { distinct: listOfCategories },
+    blogs: { edges },
   },
 }) => (
   <Layout>
     <SEO title="Blog" />
-    <IndexPage edges={ edges }/>
+    <div className={ blogStyles.page }>
+      <div className={ blogStyles.blog }>
+        <BlogList edges={ edges }/>
+      </div>
+      <div className={ blogStyles.categories }>
+        <BlogMenu categories={ listOfCategories }/>
+      </div>
+    </div>
   </Layout>
 )
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+query {
+    categories:allMarkdownRemark{
+      distinct(field: frontmatter___category)
+    }
+    paths: allMarkdownRemark{
+      distinct(field: frontmatter___path)
+    }
+    blogs: allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id

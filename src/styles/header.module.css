@@ -1,0 +1,28 @@
+/*
+Color scheme dark horse: https://hookagency.com/website-color-schemes/
+*/
+
+.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #393f4d;
+}
+
+.activeLink {
+  color: black;
+  background-color: #feda6a;
+}
+
+.text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.link {
+  display: flex;
+  color: white;
+  padding: 0 1rem 0 1rem;
+  text-decoration: none;
+}

@@ -5,19 +5,19 @@ module.exports = {
     author: `@euskal64500`,
     menuLinks: [
       {
-        name: 'home',
+        name: 'HOME',
         link: '/'
       },
       {
-        name: 'blog',
+        name: 'BLOG',
         link: '/blog'
       },
       {
-        name: 'games',
+        name: 'GAMES',
         link: '/games'
       },
       {
-        name: 'about me',
+        name: 'ABOUT ME',
         link: '/about'
       }
     ],

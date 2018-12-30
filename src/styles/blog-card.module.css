@@ -1,0 +1,28 @@
+/*
+Color scheme dark horse: https://hookagency.com/website-color-schemes/
+*/
+
+.card {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #393f4d;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: #393f4d;
+}
+
+.category {
+  color: #feda6a;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  color: white;
+  text-align: justify;
+}
+
+.description {
+  color: white;
+  text-align: justify;
+}
