@@ -4,10 +4,8 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 
 .menu {
   display: flex;
-  flex: 1;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: #393f4d;
 }
 
 .activeLink {
