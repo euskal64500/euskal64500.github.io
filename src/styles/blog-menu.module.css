@@ -18,6 +18,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   background-color: #feda6a;
   outline: 0;
   border-width: 0;
+  border-radius: 5px;
 }
 
 .button {
@@ -27,4 +28,5 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   background-color: #393f4d;
   outline: 0;
   border-width: 0;
+  border-radius: 5px;
 }
