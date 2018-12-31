@@ -15,6 +15,7 @@ class BlogMenu extends React.Component {
     this.setState({
       activeCategory: categorySelected
     });
+    this.props.onSelect(categorySelected);
   }
 
   render() {

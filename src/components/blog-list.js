@@ -3,14 +3,14 @@ import React from 'react';
 import BlogCard from './blog-card'
 import blogListStyles from '../styles/blog-list.module.css'
 
-const BlogList = ({ edges }) => {
-  const Posts = edges
-    .map(edge => <BlogCard 
-                    key={ edge.node.id }
-                    category={ edge.node.category }
-                    title={ edge.node.title }
-                    date={ edge.node.date }
-                    description={ edge.node.description }
+const BlogList = ({ posts }) => {
+  const Posts = posts
+    .map(post => <BlogCard 
+                    key={ post.id }
+                    category={ post.category }
+                    title={ post.title }
+                    date={ post.date }
+                    description={ post.description }
                   />
         )
 
