@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import BlogCard from './blog-card'
+import BlogPost from './blog-post'
 import blogListStyles from '../styles/blog-list.module.css'
 
 const BlogList = ({ posts }) => {
   const Posts = posts
-    .map(post => <BlogCard 
+    .map(post => <BlogPost 
                     key={ post.id }
                     category={ post.category }
                     title={ post.title }

@@ -12,7 +12,7 @@ path: "/blog/electronics/LED-sweater"
 
 The circuit is designed around the NE555 and the CD4022 chipsets. The NE555 generates a clock signal that gets divided by 8 by the CD4022 chipset. Each output of the CD4022 corresponds to a (1/8) subdivision of the clock signal and switches on/off in turn the LEDs connected to a bjt transistor. The transistors are used as a switch.
 
-The voltage drop of each LED is around 3V and requires a current of 20mA. After some tests, the LEDs were found too bright with this level of current. We will use 10mA instead. This will also limit the current consumption of the overall circuit and therefore the battery life.
+The voltage drop of each LED is around 3V and requires a current of 20mA. The LEDs were found too bright with this level of current. We will use 10mA instead. This will also limit the current consumption of the overall circuit and therefore save the battery life.
 
 We first start by calculating the value of the resistor at the collector of the transistor. This resistor is used to limit the current going through the LED to 10mA. The collector-emitter voltage of the transistor when in saturation mode is around 0.2V.
 

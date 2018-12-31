@@ -5,11 +5,13 @@
  */
 
 const path = require("path")
+const _ = require("lodash")
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const blogPostTemplate = path.resolve(`src/templates/post-template.js`)
+  const blogListTemplate = path.resolve("src/templates/filtered-posts.js")
 
   return graphql(`
     {
@@ -21,6 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              category
             }
           }
         }
@@ -30,12 +33,36 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+    const posts = result.data.allMarkdownRemark.edges
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+        },
+      })
+    })
+
+    // Tag pages:
+    let categories = []
+    // Iterate through each post, putting all found tags into `tags`
+    _.each(posts, edge => {
+      if (_.get(edge, "node.frontmatter.category")) {
+        categories = categories.concat(edge.node.frontmatter.category)
+      }
+    })
+    // Eliminate duplicate tags
+    categories = _.uniq(categories)
+
+    // Make tag pages
+    categories.forEach(category => {
+      createPage({
+        path: `/tags/${_.kebabCase(category)}/`,
+        component: blogListTemplate,
+        context: {
+          category,
+        },
       })
     })
   })

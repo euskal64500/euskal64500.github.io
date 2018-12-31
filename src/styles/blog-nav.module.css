@@ -1,0 +1,38 @@
+/*
+Color scheme dark horse: https://hookagency.com/website-color-schemes/
+*/
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #393f4d;
+  padding: 0rem 0rem 0rem 0rem;
+  border-radius: 5px;
+}
+
+.activeLink {
+  color: black;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  font-weight: bold;
+  background-color: #feda6a;
+  outline: 0;
+  border-width: 0;
+  border-radius: 5px;
+}
+
+.link {
+  color: white;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  font-weight: bold;
+  background-color: #393f4d;
+  outline: 0;
+  border-width: 0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.text {
+  margin-top: auto;
+  margin-bottom: auto;
+}

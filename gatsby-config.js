@@ -19,6 +19,10 @@ module.exports = {
       {
         name: 'ABOUT ME',
         link: '/about'
+      },
+      {
+        name: 'POSTS',
+        link: '/posts'
       }
     ],
   },

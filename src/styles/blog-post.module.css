@@ -26,3 +26,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   color: white;
   text-align: justify;
 }
+
+.link {
+  text-decoration: none;
+}

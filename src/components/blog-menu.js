@@ -19,7 +19,6 @@ class BlogMenu extends React.Component {
   }
 
   render() {
-    console.log('here')
     return (
       <nav className={ blogNavStyles.nav }>
       {

@@ -1,0 +1,21 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #393f4d;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: #393f4d;
+  color: white;
+}
+
+.title {
+  color: #feda6a;
+  margin: 0;
+  padding: 0;
+}
+
+.date {
+  color: #feda6a
+}
