@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import navStyles from '../styles/blog-nav.module.css'
 
-const BlogNav = () => (
+const BlogNav = ({ context }) => (
   <StaticQuery
     query={graphql`
       query {

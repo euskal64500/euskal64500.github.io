@@ -34,13 +34,13 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
     const posts = result.data.allMarkdownRemark.edges
-
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
           layout: 'posts',
+          category: node.frontmatter.category,
         },
       })
     })
@@ -78,6 +78,7 @@ exports.onCreatePage = ({ page, actions }) => {
       ...page,
       context: {
         layout: 'posts',
+        category: '',
       },
     })
   }
