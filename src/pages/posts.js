@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
-import BlogLayout from '../components/blog-layout'
 import BlogPost from '../components/blog-post'
 
 
@@ -11,13 +10,13 @@ const Posts = ({ data }) => {
   return (
     <div>
       <SEO title="Blog" />
-      <BlogLayout>
+      <div>
         { 
           edges.map(({ node }, index) => (
             <BlogPost key={ index } { ...node.frontmatter } />
           ))
         }
-      </BlogLayout>
+      </div>
     </div>
   )
 };

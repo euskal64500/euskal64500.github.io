@@ -40,6 +40,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
+          layout: 'posts',
         },
       })
     })
@@ -62,6 +63,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: blogListTemplate,
         context: {
           category,
+          layout: 'posts',
         },
       })
     })
@@ -71,8 +73,12 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if( page.path.match( /posts.*/ )) {
-    page.context.layout = 'posts'
-    createPage(page)
+  if( page.path.includes("posts") ) {
+    createPage({
+      ...page,
+      context: {
+        layout: 'posts',
+      },
+    })
   }
 }

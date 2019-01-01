@@ -1,24 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-
 import Header from './header'
-
+import BlogLayout from '../components/blog-layout'
 import layoutStyles from '../styles/layout.module.css'
 
-const PageLayout = ({ isBlogPage, data, children }) => {
+const PageLayout = ({ data, children }) => {
   return(
     <div className ={ layoutStyles.site }>
       <div className ={ layoutStyles.banner }>
         <div className ={ layoutStyles.header }>
-          <Header
-            menuLinks ={ data.site.siteMetadata.menuLinks } 
-            siteTitle ={ data.site.siteMetadata.title }
-          />
+          <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
         </div>
       </div>
       <div className={ layoutStyles.content }>
         { children }
+      </div>
+    </div>
+  )
+}
+
+const PostsLayout = ({ data, children }) => {
+  return(
+    <div className ={ layoutStyles.site }>
+      <div className ={ layoutStyles.banner }>
+        <div className ={ layoutStyles.header }>
+          <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
+        </div>
+      </div>
+      <div className={ layoutStyles.content }>
+        <BlogLayout>
+          { children }
+        </BlogLayout>
       </div>
     </div>
   )
@@ -30,7 +43,6 @@ const Layout = ({ children, pageContext }) => (
       query SiteTitleQuery {
         site {
           siteMetadata {
-            title
             menuLinks {
               name
               link
@@ -39,7 +51,13 @@ const Layout = ({ children, pageContext }) => (
         }
       }
     `}
-    render={ data => <PageLayout isBlogPage={ false } data={ data } children={ children }/> }
+    render={ data => {
+      if ( pageContext.layout === 'posts' ) {
+        return <PostsLayout data={ data } children={ children }/> 
+      } else {
+        return <PageLayout data={ data } children={ children }/> 
+      }
+    }}
   />
 )
 

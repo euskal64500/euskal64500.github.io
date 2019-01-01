@@ -2,30 +2,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
-import BlogLayout from '../components/blog-layout'
 import BlogPost from '../components/blog-post'
 
 
-const FilteredPosts = ({ pageContext, data }) => {
+const FilteredPosts = ({ data }) => {
   const { edges } = data.blogs;
   return (
     <div>
       <SEO title="Blog" />
-      <BlogLayout>
+      <div>
         { 
           edges.map(({ node }, index) => (
             <BlogPost key={ index } { ...node.frontmatter } />
           ))
         }
-      </BlogLayout>
+      </div>
     </div>
   )
 };
 
 FilteredPosts.propTypes = {
-  pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }),
   data: PropTypes.shape({
     blogs: PropTypes.shape({
       edges: PropTypes.arrayOf(
