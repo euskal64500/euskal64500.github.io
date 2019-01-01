@@ -9,10 +9,6 @@ module.exports = {
         link: '/'
       },
       {
-        name: 'BLOG',
-        link: '/blog'
-      },
-      {
         name: 'GAMES',
         link: '/games'
       },
