@@ -1,6 +1,4 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { onUnlock } from '../actions';
 import BlogNav from '../components/BlogNav';
 
 
