@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {
-          layout: 'posts',
+          layout: 'blog',
           category: node.frontmatter.category,
         },
       })
@@ -59,11 +59,11 @@ exports.createPages = ({ actions, graphql }) => {
     // Make tag pages
     categories.forEach(category => {
       createPage({
-        path: `/posts/${_.kebabCase(category)}/`,
+        path: `/blog/${_.kebabCase(category)}/`,
         component: blogListTemplate,
         context: {
           category,
-          layout: 'posts',
+          layout: 'blog',
         },
       })
     })
@@ -73,11 +73,11 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if( page.path.includes("posts") ) {
+  if( page.path.includes("blog") ) {
     createPage({
       ...page,
       context: {
-        layout: 'posts',
+        layout: 'blog',
         category: '',
       },
     })

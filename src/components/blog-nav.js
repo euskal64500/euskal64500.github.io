@@ -32,7 +32,7 @@ const BlogNav = ({ context }) => (
           <Link 
             key={ index }
             getProps={ isPartiallyActive }
-            to={ `/posts/${kebabCase( category )}/` }
+            to={ `/blog/${kebabCase( category )}/` }
           >
             <p className={ navStyles.text }>{ category }</p>
           </Link>

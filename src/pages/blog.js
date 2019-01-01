@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import BlogPost from '../components/blog-post'
 
 
-const Posts = ({ data }) => {
+const BlogPage = ({ data }) => {
   const { edges } = data.blogs;
   return (
     <div>
@@ -21,7 +21,7 @@ const Posts = ({ data }) => {
   )
 };
 
-Posts.propTypes = {
+BlogPage.propTypes = {
   pageContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
   }),
@@ -44,7 +44,7 @@ Posts.propTypes = {
   }),
 }
 
-export default Posts
+export default BlogPage
 
 export const pageQuery = graphql`
 query {

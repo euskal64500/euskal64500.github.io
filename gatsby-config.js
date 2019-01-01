@@ -9,16 +9,16 @@ module.exports = {
         link: '/'
       },
       {
+        name: 'BLOG',
+        link: '/blog'
+      },
+      {
         name: 'GAMES',
         link: '/games'
       },
       {
         name: 'ABOUT ME',
         link: '/about'
-      },
-      {
-        name: 'POSTS',
-        link: '/posts'
       }
     ],
   },

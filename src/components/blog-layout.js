@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import BlogNav from "./blog-nav"
-import blogStyles from '../styles/blog.module.css'
+import blogStyles from '../styles/blog-layout.module.css'
 
 const BlogLayout = ({ children }) => (
   <div className={ blogStyles.page }>

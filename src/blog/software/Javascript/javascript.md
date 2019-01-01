@@ -4,7 +4,7 @@ date: "2018-12-24"
 category: "Software"
 title: "Javascript blog"
 description: "Javascript programming"
-path: "/posts/software/Javascript"
+path: "/blog/software/Javascript"
 ---
 
 ### Headings

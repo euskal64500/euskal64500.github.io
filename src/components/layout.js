@@ -48,7 +48,7 @@ const Layout = ({ children, pageContext }) => (
       }
     `}
     render={ data => {
-      if ( pageContext.layout === 'posts' ) {
+      if ( pageContext.layout === 'blog' ) {
         return <PostsLayout data={ data } children={ children }/> 
       } else {
         return <PageLayout data={ data } children={ children }/> 
