@@ -9,9 +9,7 @@ const PageLayout = ({ data, children }) => {
   return(
     <div className ={ layoutStyles.site }>
       <div className ={ layoutStyles.banner }>
-        <div className ={ layoutStyles.header }>
           <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
-        </div>
       </div>
       <div className={ layoutStyles.content }>
         { children }
@@ -24,9 +22,7 @@ const PostsLayout = ({ data, children }) => {
   return(
     <div className ={ layoutStyles.site }>
       <div className ={ layoutStyles.banner }>
-        <div className ={ layoutStyles.header }>
           <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
-        </div>
       </div>
       <div className={ layoutStyles.content }>
         <BlogLayout>
