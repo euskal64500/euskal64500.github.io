@@ -19,6 +19,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   outline: 0;
   border-width: 0;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .link {

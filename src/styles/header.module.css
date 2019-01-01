@@ -13,8 +13,11 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 }
 
 .activeLink {
+  display: flex;
   color: black;
+  padding: 0 1rem 0 1rem;
   background-color: #feda6a;
+  text-decoration: none;
 }
 
 .text {

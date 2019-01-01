@@ -5,6 +5,17 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import navStyles from '../styles/blog-nav.module.css'
 
+// this link will be active when itself or deeper routes
+// are current
+const isPartiallyActive = ({
+  isPartiallyCurrent
+}) => {
+  return isPartiallyCurrent
+    ? { className: navStyles.activeLink }
+    : { className: navStyles.link }
+}
+
+
 const BlogNav = ({ context }) => (
   <StaticQuery
     query={graphql`
@@ -20,8 +31,7 @@ const BlogNav = ({ context }) => (
         data.categories.distinct.map((category, index) => 
           <Link 
             key={ index }
-            activeClassName={ navStyles.activeLink }
-            className={ navStyles.link } 
+            getProps={ isPartiallyActive }
             to={ `/posts/${kebabCase( category )}/` }
           >
             <p className={ navStyles.text }>{ category }</p>
@@ -33,6 +43,8 @@ const BlogNav = ({ context }) => (
   />
 )
 
+//
+// activeClassName={ navStyles.activeLink }
 
 BlogNav.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string),
