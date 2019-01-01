@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogMenu from "../components/blog-menu"
 import BlogList from "../components/blog-list"
@@ -51,7 +50,7 @@ class BlogPage extends React.Component {
     }
 
     return (
-      <Layout>
+      <div>
         <SEO title="Blog" />
         <div className={ blogStyles.page }>
           <div className={ blogStyles.blog }>
@@ -61,7 +60,7 @@ class BlogPage extends React.Component {
             <BlogMenu categories={ listOfCategories } onSelect={this.onSelect}/>
           </div>
         </div>
-      </Layout>
+      </div>
     )
   }
 }

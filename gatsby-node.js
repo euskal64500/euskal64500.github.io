@@ -58,7 +58,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Make tag pages
     categories.forEach(category => {
       createPage({
-        path: `/tags/${_.kebabCase(category)}/`,
+        path: `/posts/${_.kebabCase(category)}/`,
         component: blogListTemplate,
         context: {
           category,
@@ -66,4 +66,13 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
   })
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions
+
+  if( page.path.match( /posts.*/ )) {
+    page.context.layout = 'posts'
+    createPage(page)
+  }
 }

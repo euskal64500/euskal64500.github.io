@@ -6,7 +6,25 @@ import Header from './header'
 
 import layoutStyles from '../styles/layout.module.css'
 
-const Layout = ({ children }) => (
+const PageLayout = ({ isBlogPage, data, children }) => {
+  return(
+    <div className ={ layoutStyles.site }>
+      <div className ={ layoutStyles.banner }>
+        <div className ={ layoutStyles.header }>
+          <Header
+            menuLinks ={ data.site.siteMetadata.menuLinks } 
+            siteTitle ={ data.site.siteMetadata.title }
+          />
+        </div>
+      </div>
+      <div className={ layoutStyles.content }>
+        { children }
+      </div>
+    </div>
+  )
+}
+
+const Layout = ({ children, pageContext }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -21,21 +39,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <div className={ layoutStyles.site }>
-        <div className={ layoutStyles.banner }>
-          <div className={ layoutStyles.header }>
-            <Header
-              menuLinks={data.site.siteMetadata.menuLinks} 
-              siteTitle={data.site.siteMetadata.title}
-            />
-          </div>
-        </div>
-        <div className={ layoutStyles.content }>
-          {children}
-        </div>
-      </div>
-    )}
+    render={ data => <PageLayout isBlogPage={ false } data={ data } children={ children }/> }
   />
 )
 

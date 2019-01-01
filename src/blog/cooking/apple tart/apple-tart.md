@@ -4,7 +4,7 @@ date: "2018-12-24"
 category: "Cooking"
 title: "Apple tarte recipe"
 description: "How to make delicious apple tart"
-path: "/blog/cooking/apple-tart"
+path: "/posts/cooking/apple-tart"
 ---
 
 # Contemne gaudete horrenda quid videt capiat membra

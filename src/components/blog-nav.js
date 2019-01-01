@@ -22,7 +22,7 @@ const BlogNav = () => (
             key={ index }
             activeClassName={ navStyles.activeLink }
             className={ navStyles.link } 
-            to={ `/tags/${kebabCase(category)}/` }
+            to={ `/posts/${kebabCase( category )}/` }
           >
             <p className={ navStyles.text }>{ category }</p>
           </Link>

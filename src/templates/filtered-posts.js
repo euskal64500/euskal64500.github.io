@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogLayout from '../components/blog-layout'
 import BlogPost from '../components/blog-post'
@@ -10,7 +9,7 @@ import BlogPost from '../components/blog-post'
 const FilteredPosts = ({ pageContext, data }) => {
   const { edges } = data.blogs;
   return (
-    <Layout>
+    <div>
       <SEO title="Blog" />
       <BlogLayout>
         { 
@@ -19,7 +18,7 @@ const FilteredPosts = ({ pageContext, data }) => {
           ))
         }
       </BlogLayout>
-    </Layout>
+    </div>
   )
 };
 

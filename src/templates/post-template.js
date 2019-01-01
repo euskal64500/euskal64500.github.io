@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BlogLayout from '../components/blog-layout'
 
@@ -11,7 +10,7 @@ const Post = ({ pageContext, data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
+    <div>
       <SEO title="Blog" />
       <BlogLayout>
         <div className={ postStyles.post }>
@@ -20,7 +19,7 @@ const Post = ({ pageContext, data }) => {
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </BlogLayout>
-    </Layout>
+    </div>
   )
 };
 
