@@ -1,43 +1,38 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import kebabCase from "lodash/kebabCase"
+import kebabCase from 'lodash/kebabCase'
 import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import navStyles from '../styles/blog-nav.module.css'
 
 // this link will be active when itself or deeper routes
 // are current
-const isPartiallyActive = ({
-  isPartiallyCurrent
-}) => {
+const isPartiallyActive = ({ isPartiallyCurrent }) => {
   return isPartiallyCurrent
     ? { className: navStyles.activeLink }
     : { className: navStyles.link }
 }
 
-
 const BlogNav = ({ context }) => (
   <StaticQuery
     query={graphql`
       query {
-        categories: allMarkdownRemark{
+        categories: allMarkdownRemark {
           distinct(field: frontmatter___category)
         }
       }
     `}
-    render = { data  => (
-      <nav className={ navStyles.nav }>
-      {
-        data.categories.distinct.map((category, index) => 
-          <Link 
-            key={ index }
-            getProps={ isPartiallyActive }
-            to={ `/blog/${kebabCase( category )}/` }
+    render={data => (
+      <nav className={navStyles.nav}>
+        {data.categories.distinct.map((category, index) => (
+          <Link
+            key={index}
+            getProps={isPartiallyActive}
+            to={`/blog/${kebabCase(category)}/`}
           >
-            <p className={ navStyles.text }>{ category }</p>
+            <p className={navStyles.text}>{category}</p>
           </Link>
-        )
-      }
+        ))}
       </nav>
     )}
   />
@@ -51,7 +46,7 @@ BlogNav.propTypes = {
 }
 
 BlogNav.defaultProps = {
-  categories: []
+  categories: [],
 }
 
 export default BlogNav

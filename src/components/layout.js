@@ -6,28 +6,24 @@ import BlogLayout from '../components/blog-layout'
 import layoutStyles from '../styles/layout.module.css'
 
 const PageLayout = ({ data, children }) => {
-  return(
-    <div className ={ layoutStyles.site }>
-      <div className ={ layoutStyles.banner }>
-          <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
+  return (
+    <div className={layoutStyles.site}>
+      <div className={layoutStyles.banner}>
+        <Header menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
-      <div className={ layoutStyles.content }>
-        { children }
-      </div>
+      <div className={layoutStyles.content}>{children}</div>
     </div>
   )
 }
 
 const PostsLayout = ({ data, children }) => {
-  return(
-    <div className ={ layoutStyles.site }>
-      <div className ={ layoutStyles.banner }>
-          <Header menuLinks ={ data.site.siteMetadata.menuLinks } />
+  return (
+    <div className={layoutStyles.site}>
+      <div className={layoutStyles.banner}>
+        <Header menuLinks={data.site.siteMetadata.menuLinks} />
       </div>
-      <div className={ layoutStyles.content }>
-        <BlogLayout>
-          { children }
-        </BlogLayout>
+      <div className={layoutStyles.content}>
+        <BlogLayout>{children}</BlogLayout>
       </div>
     </div>
   )
@@ -47,11 +43,11 @@ const Layout = ({ children, pageContext }) => (
         }
       }
     `}
-    render={ data => {
-      if ( pageContext.layout === 'blog' ) {
-        return <PostsLayout data={ data } children={ children }/> 
+    render={data => {
+      if (pageContext.layout === 'blog') {
+        return <PostsLayout data={data} children={children} />
       } else {
-        return <PageLayout data={ data } children={ children }/> 
+        return <PageLayout data={data} children={children} />
       }
     }}
   />

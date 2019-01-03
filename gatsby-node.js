@@ -4,16 +4,15 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require("path")
-const _ = require("lodash")
+const path = require('path')
+const _ = require('lodash')
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/post-template.js`)
-  const blogListTemplate = path.resolve("src/templates/filtered-posts.js")
+  const blogListTemplate = path.resolve('src/templates/filtered-posts.js')
 
   return graphql(`
     {
@@ -51,7 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
     let categories = []
     // Iterate through each post, putting all found tags into `tags`
     _.each(posts, edge => {
-      if (_.get(edge, "node.frontmatter.category")) {
+      if (_.get(edge, 'node.frontmatter.category')) {
         categories = categories.concat(edge.node.frontmatter.category)
       }
     })
@@ -75,7 +74,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage } = actions
 
-  if( page.path.includes("blog") ) {
+  if (page.path.includes('blog')) {
     createPage({
       ...page,
       context: {
@@ -88,7 +87,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  
+
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({

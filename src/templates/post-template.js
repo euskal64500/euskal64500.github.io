@@ -11,14 +11,14 @@ const Post = ({ data }) => {
   return (
     <div>
       <SEO title="Blog" />
-      <div className={ postStyles.post }>
-        <h1 className={ postStyles.title }>{frontmatter.title}</h1>
-        <p className={ postStyles.date }>{frontmatter.date}</p>
+      <div className={postStyles.post}>
+        <h1 className={postStyles.title}>{frontmatter.title}</h1>
+        <p className={postStyles.date}>{frontmatter.date}</p>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
   )
-};
+}
 
 Post.propTypes = {
   data: PropTypes.shape({
@@ -30,7 +30,7 @@ Post.propTypes = {
         path: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
       }),
-    })  
+    }),
   }),
 }
 

@@ -6,20 +6,20 @@ module.exports = {
     menuLinks: [
       {
         name: 'HOME',
-        link: '/'
+        link: '/',
       },
       {
         name: 'BLOG',
-        link: '/blog'
+        link: '/blog',
       },
       {
         name: 'GAMES',
-        link: '/games'
+        link: '/games',
       },
       {
         name: 'ABOUT ME',
-        link: '/about'
-      }
+        link: '/about',
+      },
     ],
   },
   plugins: [
@@ -35,8 +35,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/blog/`,
-        name: "markdown-pages",
-      }
+        name: 'markdown-pages',
+      },
     },
     `gatsby-transformer-sharp`,
     {
@@ -62,7 +62,7 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
-      }
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -72,9 +72,9 @@ module.exports = {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: './static',
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
     },
     {
@@ -88,7 +88,7 @@ module.exports = {
         wrapperStyle: 'margin: 1rem 1rem 1rem 1rem; background: #feda6a',
         backgroundColor: '#feda6a',
         withWebp: true,
-      }
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-          component: require.resolve(`./src/components/layout.js`)
-      }
+        component: require.resolve(`./src/components/layout.js`),
+      },
     },
   ],
 }

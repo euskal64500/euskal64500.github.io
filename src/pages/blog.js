@@ -4,22 +4,19 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import BlogPost from '../components/blog-post'
 
-
 const BlogPage = ({ data }) => {
-  const { edges } = data.blogs;
+  const { edges } = data.blogs
   return (
     <div>
       <SEO title="Blog" />
       <div>
-        { 
-          edges.map(({ node }, index) => (
-            <BlogPost key={ index } { ...node.frontmatter } />
-          ))
-        }
+        {edges.map(({ node }, index) => (
+          <BlogPost key={index} {...node.frontmatter} />
+        ))}
       </div>
     </div>
   )
-};
+}
 
 BlogPage.propTypes = {
   pageContext: PropTypes.shape({
@@ -48,30 +45,29 @@ BlogPage.propTypes = {
 export default BlogPage
 
 export const pageQuery = graphql`
-query {
-  blogs: allMarkdownRemark(
-    sort: { order: DESC, fields: [frontmatter___date] }
-  )
-  {
-    edges {
-      node {
-        id
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          category
-          title
-          description
-          path
-          cover_image {         
-          	childImageSharp {
-              sizes(maxWidth: 200) {
-                ...GatsbyImageSharpSizes
+  query {
+    blogs: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            category
+            title
+            description
+            path
+            cover_image {
+              childImageSharp {
+                sizes(maxWidth: 200) {
+                  ...GatsbyImageSharpSizes
+                }
               }
-          	}
+            }
           }
         }
       }
     }
   }
-}
 `

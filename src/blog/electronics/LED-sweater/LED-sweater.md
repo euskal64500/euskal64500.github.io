@@ -9,8 +9,9 @@ path: "/blog/electronics/LED-sweater"
 cover_image: "./led-sweater.jpg"
 ---
 
-<img src="led-sweater.jpg"/>
-![](./led-sweater.jpg)
+![ugly sweater](./led-sweater.jpg)
+
+![ugly sweater](led-sweater.jpg)
 
 ## The circuit
 
