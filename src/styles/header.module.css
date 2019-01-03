@@ -10,6 +10,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   padding: 0 1.0875rem 0 1.45rem;
   flex-direction: row;
   justify-content: flex-start;
+  z-index: inherit;
 }
 
 .activeLink {
@@ -18,11 +19,14 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   padding: 0 1rem 0 1rem;
   background-color: #feda6a;
   text-decoration: none;
+  z-index: inherit;
 }
 
 .text {
   margin-top: auto;
   margin-bottom: auto;
+  z-index: inherit;
+
 }
 
 .link {
@@ -30,4 +34,5 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   color: white;
   padding: 0 1rem 0 1rem;
   text-decoration: none;
+  z-index: inherit;
 }

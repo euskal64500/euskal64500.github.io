@@ -5,6 +5,7 @@ category: "Cooking"
 title: "Apple tarte recipe"
 description: "How to make delicious apple tart"
 path: "/blog/cooking/apple-tart"
+cover_image: "./tarte-aux-pommes.jpg"
 ---
 
 # Contemne gaudete horrenda quid videt capiat membra

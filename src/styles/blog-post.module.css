@@ -8,6 +8,29 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   border: 1px solid #393f4d;
   margin: 0.5rem 0 0.5rem 0;
   background-color: #393f4d;
+  width: 100%;
+  z-index: inherit;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: inherit;
+}
+
+.left {
+  flex: 2;
+  padding: 0rem 1rem 0rem 0rem;
+  z-index: inherit;
+}
+
+.right {
+  flex: 1;
+  margin: auto;
+  z-index: inherit 1;
+  z-index: inherit;
 }
 
 .category {

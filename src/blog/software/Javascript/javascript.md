@@ -5,6 +5,7 @@ category: "Software"
 title: "Javascript blog"
 description: "Javascript programming"
 path: "/blog/software/Javascript"
+cover_image: "./javascript-logo.png"
 ---
 
 ### Headings

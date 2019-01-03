@@ -33,6 +33,7 @@ FilteredPosts.propTypes = {
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
+              cover_image: PropTypes.object.isRequired,
             }),
           }),
         }).isRequired
@@ -60,6 +61,13 @@ query($category: String) {
           title
           description
           path
+          cover_image {         
+          	childImageSharp {
+              sizes(maxWidth: 200) {
+                ...GatsbyImageSharpSizes
+              }
+          	}
+          }
         }
       }
     }

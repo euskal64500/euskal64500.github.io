@@ -6,7 +6,11 @@ title: "LED sweater"
 description: "This fun project will guide you through the implementation of a small electronics project, from the design of the circuit to the realization of a prototype to the final printed circuit." 
 sections: "Parts Prototype"
 path: "/blog/electronics/LED-sweater"
+cover_image: "./led-sweater.jpg"
 ---
+
+<img src="led-sweater.jpg"/>
+![](./led-sweater.jpg)
 
 ## The circuit
 

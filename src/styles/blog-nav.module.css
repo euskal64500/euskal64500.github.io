@@ -14,7 +14,6 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 .activeLink {
   color: black;
   padding: 0.5rem 3rem 0.5rem 3rem;
-  font-weight: bold;
   background-color: #feda6a;
   outline: 0;
   border-width: 0;
@@ -25,7 +24,6 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 .link {
   color: white;
   padding: 0.5rem 3rem 0.5rem 3rem;
-  font-weight: bold;
   background-color: #393f4d;
   outline: 0;
   border-width: 0;

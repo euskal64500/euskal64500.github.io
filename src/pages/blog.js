@@ -36,6 +36,7 @@ BlogPage.propTypes = {
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
+              cover_image: PropTypes.object.isRequired,
             }),
           }),
         }).isRequired
@@ -61,6 +62,13 @@ query {
           title
           description
           path
+          cover_image {         
+          	childImageSharp {
+              sizes(maxWidth: 200) {
+                ...GatsbyImageSharpSizes
+              }
+          	}
+          }
         }
       }
     }

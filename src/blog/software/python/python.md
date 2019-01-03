@@ -5,6 +5,7 @@ category: "Software"
 title: "Python blog"
 description: "Python programming"
 path: "/blog/software/python"
+cover_image: "python-logo.png"
 ---
 
 ### Headings
