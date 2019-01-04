@@ -5,7 +5,7 @@ category: "Software"
 title: "React-native"
 description: "How to make delicious brioche"
 path: "/blog/software/react-native"
-cover_image: "./react-logo.png"
+cover: "./react-logo.png"
 ---
 
 ### Headings

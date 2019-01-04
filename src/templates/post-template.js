@@ -34,6 +34,10 @@ Post.propTypes = {
   }),
 }
 
+Post.defaultProps = {
+  data: {},
+}
+
 export default Post
 
 export const pageQuery = graphql`

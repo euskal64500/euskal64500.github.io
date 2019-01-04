@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "settings": {
+    "import/core-modules": ["gatsby"]
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

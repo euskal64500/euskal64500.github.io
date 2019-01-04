@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
 import wrapWithProvider from './wrap-with-provider'
-export const wrapRootElement = wrapWithProvider
+import 'prismjs/themes/prism-solarizedlight.css'
+
+const wrapRootElement = wrapWithProvider
+
+export default wrapRootElement

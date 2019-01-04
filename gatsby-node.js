@@ -6,6 +6,7 @@
 
 const path = require('path')
 const _ = require('lodash')
+
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ actions, graphql }) => {
@@ -30,45 +31,53 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
-    const posts = result.data.allMarkdownRemark.edges
-    posts.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          layout: 'blog',
-          category: node.frontmatter.category,
-        },
-      })
-    })
-
-    // Tag pages:
-    let categories = []
-    // Iterate through each post, putting all found tags into `tags`
-    _.each(posts, edge => {
-      if (_.get(edge, 'node.frontmatter.category')) {
-        categories = categories.concat(edge.node.frontmatter.category)
+  `)
+    .then(result => {
+      if (result.errors) {
+        return Promise.reject(result.errors)
       }
-    })
-    // Eliminate duplicate tags
-    categories = _.uniq(categories)
-
-    // Make tag pages
-    categories.forEach(category => {
-      createPage({
-        path: `/blog/${_.kebabCase(category)}/`,
-        component: blogListTemplate,
-        context: {
-          category,
-          layout: 'blog',
-        },
+      const posts = result.data.allMarkdownRemark.edges
+      posts.forEach(({ node }) => {
+        createPage({
+          path: node.frontmatter.path,
+          component: blogPostTemplate,
+          context: {
+            layout: 'blog',
+            category: node.frontmatter.category,
+          },
+        })
       })
+
+      return result
     })
-  })
+    .then(result => {
+      const posts = result.data.allMarkdownRemark.edges
+
+      // Tag pages:
+      let categories = []
+      // Iterate through each post, putting all found tags into `tags`
+      _.each(posts, edge => {
+        if (_.get(edge, 'node.frontmatter.category')) {
+          categories = categories.concat(edge.node.frontmatter.category)
+        }
+      })
+      // Eliminate duplicate tags
+      categories = _.uniq(categories)
+
+      // Make tag pages
+      categories.forEach(category => {
+        createPage({
+          path: `/blog/${_.kebabCase(category)}/`,
+          component: blogListTemplate,
+          context: {
+            category,
+            layout: 'blog',
+          },
+        })
+      })
+
+      return result
+    })
 }
 
 exports.onCreatePage = ({ page, actions }) => {

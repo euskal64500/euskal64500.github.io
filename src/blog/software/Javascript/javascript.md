@@ -5,7 +5,7 @@ category: "Software"
 title: "Javascript blog"
 description: "Javascript programming"
 path: "/blog/software/Javascript"
-cover_image: "./javascript-logo.png"
+cover: "./javascript-logo.png"
 ---
 
 ### Headings
@@ -81,7 +81,7 @@ Content Cell | Content Cell
 ---
 
 ### Code
-
+```javascript
 	var num1 = 3;
 	var num2 = 2;
 
@@ -90,4 +90,9 @@ Content Cell | Content Cell
 	}
 
 	var sum = add(num1, num2);
-  
+```  
+
+```python
+s = "Python syntax highlighting"
+print s
+```

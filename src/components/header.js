@@ -6,23 +6,21 @@ import headerStyles from '../styles/header.module.css'
 
 // this link will be active when itself or deeper routes
 // are current
-const isActive = ({ isCurrent }) => {
-  return isCurrent
+const isActive = ({ isCurrent }) =>
+  isCurrent
     ? { className: headerStyles.activeLink }
     : { className: headerStyles.link }
-}
 
-const isPartiallyActive = ({ isPartiallyCurrent }) => {
-  return isPartiallyCurrent
+const isPartiallyActive = ({ isPartiallyCurrent }) =>
+  isPartiallyCurrent
     ? { className: headerStyles.activeLink }
     : { className: headerStyles.link }
-}
 
-const Header = ({ siteTitle, menuLinks, location }) => (
+const Header = ({ menuLinks }) => (
   <nav className={headerStyles.menu}>
-    {menuLinks.map((link, index) => (
+    {menuLinks.map(link => (
       <Link
-        key={index}
+        key={link.name}
         getProps={link.name === 'HOME' ? isActive : isPartiallyActive}
         to={link.link}
         state={{ selectedMenu: link.name }}
@@ -34,12 +32,10 @@ const Header = ({ siteTitle, menuLinks, location }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
   menuLinks: PropTypes.arrayOf(PropTypes.object),
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
   menuLinks: [],
 }
 

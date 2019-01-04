@@ -5,7 +5,7 @@ category: "Software"
 title: "React Js"
 description: "How to make delicious brioche"
 path: "/blog/software/reactjs"
-cover_image: "./react-logo.png"
+cover: "./react-logo.png"
 ---
 
 ### Headings

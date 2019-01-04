@@ -15,6 +15,8 @@ const updateBlog = (state = initialBlogState, action) => {
   }
 }
 
-export const website = combineReducers({
+const website = combineReducers({
   blog: updateBlog,
 })
+
+export { website as default }

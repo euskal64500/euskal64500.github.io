@@ -10,8 +10,8 @@ const BlogPage = ({ data }) => {
     <div>
       <SEO title="Blog" />
       <div>
-        {edges.map(({ node }, index) => (
-          <BlogPost key={index} {...node.frontmatter} />
+        {edges.map(({ node }) => (
+          <BlogPost key={node.id} {...node.frontmatter} />
         ))}
       </div>
     </div>
@@ -19,9 +19,6 @@ const BlogPage = ({ data }) => {
 }
 
 BlogPage.propTypes = {
-  pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }),
   data: PropTypes.shape({
     blogs: PropTypes.shape({
       edges: PropTypes.arrayOf(
@@ -33,13 +30,17 @@ BlogPage.propTypes = {
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
-              cover_image: PropTypes.object.isRequired,
+              cover: PropTypes.object.isRequired,
             }),
           }),
         }).isRequired
       ),
     }),
   }),
+}
+
+BlogPage.defaultProps = {
+  data: {},
 }
 
 export default BlogPage
@@ -58,7 +59,7 @@ export const pageQuery = graphql`
             title
             description
             path
-            cover_image {
+            cover {
               childImageSharp {
                 sizes(maxWidth: 200) {
                   ...GatsbyImageSharpSizes
