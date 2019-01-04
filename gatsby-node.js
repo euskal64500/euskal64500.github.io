@@ -23,8 +23,10 @@ exports.createPages = ({ actions, graphql }) => {
       ) {
         edges {
           node {
+            fields {
+              slug
+            }
             frontmatter {
-              path
               category
             }
           }
@@ -39,11 +41,11 @@ exports.createPages = ({ actions, graphql }) => {
       const posts = result.data.allMarkdownRemark.edges
       posts.forEach(({ node }) => {
         createPage({
-          path: node.frontmatter.path,
+          path: node.fields.slug,
           component: blogPostTemplate,
           context: {
             layout: 'blog',
-            category: node.frontmatter.category,
+            slug: node.fields.slug,
           },
         })
       })
@@ -98,11 +100,26 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // Creates a new path by removing the directory name in which the md file is
+    // located
+    // /electronics/LED-sweater/LED-sweater => /electronics/LED-sweater
+    // /cooking/apple-tart/apple-tart => /cooking/apple-tart
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: `src/blog`,
+      trailingSlash: false,
+    })
+    const dirname = path.dirname(slug)
+    const filename = path.basename(slug)
+    const parts = dirname.split(path.sep)
+    parts.pop()
+    const newSlug = path.join('/blog/', ...parts, filename)
+
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: newSlug,
     })
   }
 }

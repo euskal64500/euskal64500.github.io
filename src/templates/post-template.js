@@ -7,7 +7,7 @@ import postStyles from '../styles/post.module.css'
 
 const Post = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, fields } = markdownRemark
   return (
     <div>
       <SEO title="Blog" />
@@ -24,10 +24,12 @@ Post.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       html: PropTypes.string.isRequired,
+      fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+      }),
       frontmatter: PropTypes.shape({
         category: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
       }),
     }),
@@ -41,12 +43,14 @@ Post.defaultProps = {
 export default Post
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
         category
       }

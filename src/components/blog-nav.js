@@ -35,9 +35,6 @@ const BlogNav = () => (
   />
 )
 
-//
-// activeClassName={ navStyles.activeLink }
-
 BlogNav.propTypes = {}
 
 BlogNav.defaultProps = {}
