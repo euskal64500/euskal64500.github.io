@@ -1,31 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
-import BlogLayout from './blog-layout'
+import Page from './page'
 import layoutStyles from '../styles/layout.module.css'
 
-const PageLayout = ({ data, children }) => (
-  <div className={layoutStyles.site}>
-    <div className={layoutStyles.banner}>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} />
-    </div>
-    <div className={layoutStyles.content}>{children}</div>
-  </div>
-)
-
-const PostsLayout = ({ data, children }) => (
-  <div className={layoutStyles.site}>
-    <div className={layoutStyles.banner}>
-      <Header menuLinks={data.site.siteMetadata.menuLinks} />
-    </div>
-    <div className={layoutStyles.content}>
-      <BlogLayout>{children}</BlogLayout>
-    </div>
-  </div>
-)
-
-const Layout = ({ children, pageContext }) => (
+const Layout = props => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -39,30 +18,21 @@ const Layout = ({ children, pageContext }) => (
         }
       }
     `}
-    render={data => {
-      if (pageContext.layout === 'blog') {
-        return <PostsLayout data={data} children={children} />
-      }
-      return <PageLayout data={data} children={children} />
-    }}
+    render={data => (
+      <div className={layoutStyles.site}>
+        <div className={layoutStyles.banner}>
+          <Header menuLinks={data.site.siteMetadata.menuLinks} />
+        </div>
+        <div className={layoutStyles.content}>
+          <Page {...props} />
+        </div>
+      </div>
+    )}
   />
 )
 
-Layout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  pageContext: PropTypes.shape({
-    layout: PropTypes.string.isRequired,
-  }),
-}
+Layout.propTypes = {}
 
-Layout.defaultProps = {
-  children: {},
-  pageContext: {
-    layout: '',
-  },
-}
+Layout.defaultProps = {}
 
 export default Layout

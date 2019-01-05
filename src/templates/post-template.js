@@ -7,7 +7,7 @@ import postStyles from '../styles/post.module.css'
 
 const Post = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html, fields } = markdownRemark
+  const { frontmatter, html } = markdownRemark
   return (
     <div>
       <SEO title="Blog" />
