@@ -5,6 +5,7 @@
  */
 import wrapWithProvider from './wrap-with-provider'
 import './src/css/custom-prism-solarizedlight.css'
+import 'katex/dist/katex.min.css'
 
 const wrapRootElement = wrapWithProvider
 

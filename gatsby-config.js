@@ -69,9 +69,34 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 650,
+              showCaptions: true,
+              wrapperStyle: 'margin: 1rem 1rem 1rem 1rem; background: #feda6a',
+              backgroundColor: '#feda6a',
+              withWebp: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: './static',
+            },
+          },
+          {
+            resolve: `gatsby-remark-smartypants`,
+            options: {
+              dashes: `oldschool`,
             },
           },
           {
@@ -80,20 +105,9 @@ module.exports = {
               showLineNumbers: false,
             },
           },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-katex`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        // It's important to specify the maxWidth (in pixels) of
-        // the content container as this plugin uses this as the
-        // base for generating different widths of each image.
-        maxWidth: 650,
-        showCaptions: true,
-        wrapperStyle: 'margin: 1rem 1rem 1rem 1rem; background: #feda6a',
-        backgroundColor: '#feda6a',
-        withWebp: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -105,6 +119,7 @@ module.exports = {
         component: require.resolve(`./src/components/layout.js`),
       },
     },
-    'gatsby-plugin-eslint',
+    `gatsby-plugin-eslint`,
+    `gatsby-plugin-catch-links`,
   ],
 }

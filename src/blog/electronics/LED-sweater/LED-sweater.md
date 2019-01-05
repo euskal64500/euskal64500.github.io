@@ -8,8 +8,6 @@ sections: "Parts Prototype"
 cover: "./led-sweater.jpg"
 ---
 
-![ugly sweater](./led-sweater.jpg)
-
 ![ugly sweater](led-sweater.jpg)
 
 ## The circuit
@@ -20,12 +18,12 @@ The voltage drop of each LED is around 3V and requires a current of 20mA. The LE
 
 We first start by calculating the value of the resistor at the collector of the transistor. This resistor is used to limit the current going through the LED to 10mA. The collector-emitter voltage of the transistor when in saturation mode is around 0.2V.
 
-R = (9V - 2 x 3V) / 10mA = 3 * 100 = 300 ohm. We choose a resistor value a bit lower The power consumption of the resistor is V x I = R x I2 = 320 x 0.01 x 0.01 = W which is lower than the 1/4W limit
+$R = (9V - 2 x 3V) / 10mA = 3 * 100 = 300 ohm$. We choose a resistor value a bit lower The power consumption of the resistor is $V x I = R x I2 = 320 x 0.01 x 0.01 = W$ which is lower than the 1/4W limit
 
 The transistors are used as a switch. The base resistor value is choosen to drive the transistors into saturation. In order to compute its value, we underestimate the transistor beta. Common convention is to use a beta of 5.
 
 The base resitor value should be:
-R = (5 - 0.7) / (10mA / 5) = (4.3 * 5 * 1000) / 10 = 4.3 * 500 = 2150 ohm. We
+$R = (5 - 0.7) / (10mA / 5) = (4.3 * 5 * 1000) / 10 = 4.3 * 500 = 2150 ohm$. We
 will round this to 2.2k ohm.
 where 0.7V is the voltage drop between the base and the emitter of the transistor.
 
