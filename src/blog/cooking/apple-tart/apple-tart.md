@@ -5,6 +5,8 @@ category: "Cooking"
 title: "Apple tarte recipe"
 description: "How to make delicious apple tart"
 cover: "./tarte-aux-pommes.jpg"
+tags: "apple, tart, dessert, french cuisine"
+lang: "en"
 ---
 
 # Contemne gaudete horrenda quid videt capiat membra

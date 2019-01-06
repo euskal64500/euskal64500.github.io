@@ -8,9 +8,19 @@ import postStyles from '../styles/post.module.css'
 const Post = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+  const keywords = frontmatter.tags
+    .split(',')
+    .concat(frontmatter.category)
+    .map(item => item.trim())
+
   return (
     <div>
-      <SEO title="Blog" />
+      <SEO
+        title={frontmatter.title}
+        lang={frontmatter.lang}
+        description={frontmatter.description}
+        keywords={keywords}
+      />
       <div className={postStyles.post}>
         <h1 className={postStyles.title}>{frontmatter.title}</h1>
         <p className={postStyles.date}>{frontmatter.date}</p>
@@ -31,6 +41,9 @@ Post.propTypes = {
         category: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        lang: PropTypes.string.isRequired,
+        tags: PropTypes.string.isRequired,
       }),
     }),
   }),
@@ -52,7 +65,10 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        description
+        lang
         category
+        tags
       }
     }
   }

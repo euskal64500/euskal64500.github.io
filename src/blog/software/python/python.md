@@ -5,6 +5,8 @@ category: "Software"
 title: "Python blog"
 description: "Python programming"
 cover: "python-logo.png"
+tags: "python"
+lang: "en"
 ---
 
 ### Headings

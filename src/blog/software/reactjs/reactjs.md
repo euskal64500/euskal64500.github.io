@@ -5,6 +5,8 @@ category: "Software"
 title: "React Js"
 description: "How to make delicious brioche"
 cover: "./react-logo.png"
+tags: "web, javascript, reactjs"
+lang: "en"
 ---
 
 ### Headings
