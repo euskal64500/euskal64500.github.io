@@ -6,7 +6,7 @@ title: "LED sweater"
 description: "This fun project will guide you through the implementation of a small electronics project, from the design of the circuit to the realization of a prototype to the final printed circuit." 
 sections: "Parts Prototype"
 cover: "./led-sweater.jpg"
-tags: "LED, christmas"
+tags: ["LED", "christmas"]
 lang: "en"
 ---
 

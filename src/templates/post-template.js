@@ -9,7 +9,6 @@ const Post = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   const keywords = frontmatter.tags
-    .split(',')
     .concat(frontmatter.category)
     .map(item => item.trim())
 
@@ -43,7 +42,7 @@ Post.propTypes = {
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         lang: PropTypes.string.isRequired,
-        tags: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
       }),
     }),
   }),

@@ -5,7 +5,7 @@ category: "Cooking"
 title: "Brioche recipe"
 description: "How to make delicious brioche"
 cover: "./brioche.jpg"
-tags: "breakfast, french cuisine"
+tags: ["breakfast", "french cuisine"]
 lang: "en"
 ---
 

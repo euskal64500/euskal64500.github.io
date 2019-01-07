@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
             }
             frontmatter {
               category
+              tags
             }
           }
         }
@@ -78,6 +79,21 @@ exports.createPages = ({ actions, graphql }) => {
         })
       })
 
+      return result
+    })
+    .then(result => {
+      const posts = result.data.allMarkdownRemark.edges
+
+      // Tag pages:
+      let tags = []
+      // Iterate through each post, putting all found tags into `tags`
+      _.each(posts, edge => {
+        if (_.get(edge, 'node.frontmatter.category')) {
+          tags = tags.concat(edge.node.frontmatter.tags)
+        }
+      })
+      // Eliminate duplicate tags
+      tags = _.uniq(tags)
       return result
     })
 }

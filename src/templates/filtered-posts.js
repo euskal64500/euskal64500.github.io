@@ -38,6 +38,7 @@ FilteredPosts.propTypes = {
               title: PropTypes.string.isRequired,
               description: PropTypes.string.isRequired,
               cover: PropTypes.object.isRequired,
+              tags: PropTypes.arrayOf(PropTypes.string).isRequired,
             }),
           }),
         }).isRequired
@@ -70,7 +71,6 @@ export const pageQuery = graphql`
             category
             title
             description
-            path
             cover {
               childImageSharp {
                 sizes(maxWidth: 200) {
@@ -78,6 +78,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            tags
           }
         }
       }

@@ -5,7 +5,7 @@ category: "Software"
 title: "Javascript blog"
 description: "Javascript programming"
 cover: "./javascript-logo.png"
-tags: "javascript"
+tags: ["javascript"]
 lang: "en"
 ---
 

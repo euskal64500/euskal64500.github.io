@@ -6,6 +6,8 @@ title: "React-native"
 description: "How to make delicious brioche"
 path: "/blog/software/react-native"
 cover: "./react-logo.png"
+tags: ["mobile", "javascript", "react-native"]
+lang: "en"
 ---
 
 ### Headings
