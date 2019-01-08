@@ -1,0 +1,12 @@
+/*
+Color scheme dark horse: https://hookagency.com/website-color-schemes/
+*/
+
+.nav {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #393f4d;
+  padding: 0rem 0rem 0rem 0rem;
+}

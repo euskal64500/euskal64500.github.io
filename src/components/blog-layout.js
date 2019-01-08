@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BlogNav from './blog-nav'
+import BlogTags from './blog-tags'
 import blogStyles from '../styles/blog-layout.module.css'
 
 const BlogLayout = ({ children }) => (
   <div className={blogStyles.page}>
-    <div className={blogStyles.blog}>{children}</div>
-    <div className={blogStyles.categories}>
-      <BlogNav />
+    <div className={blogStyles.tags}>
+      <BlogTags />
     </div>
+    <div className={blogStyles.posts}>{children}</div>
   </div>
 )
 

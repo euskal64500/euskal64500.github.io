@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import BlogPost from '../components/blog-post'
 
-const FilteredPosts = ({ data }) => {
-  const { edges } = data.blogs
+const FilteredByCategoryPosts = ({ data }) => {
+  const { edges } = data.postsByCategory
   return (
     <div>
       <SEO title="Blog" />
@@ -22,9 +22,9 @@ const FilteredPosts = ({ data }) => {
   )
 }
 
-FilteredPosts.propTypes = {
+FilteredByCategoryPosts.propTypes = {
   data: PropTypes.shape({
-    blogs: PropTypes.shape({
+    postsByCategory: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -47,15 +47,15 @@ FilteredPosts.propTypes = {
   }),
 }
 
-FilteredPosts.defaultProps = {
+FilteredByCategoryPosts.defaultProps = {
   data: {},
 }
 
-export default FilteredPosts
+export default FilteredByCategoryPosts
 
 export const pageQuery = graphql`
   query($category: String) {
-    blogs: allMarkdownRemark(
+    postsByCategory: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { category: { in: [$category] } } }
     ) {

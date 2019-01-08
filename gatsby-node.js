@@ -13,7 +13,10 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/post-template.js`)
-  const blogListTemplate = path.resolve('src/templates/filtered-posts.js')
+  const postsByCategory = path.resolve(
+    'src/templates/posts-filtered-by-category.js'
+  )
+  const postsByTag = path.resolve('src/templates/posts-filtered-by-tag.js')
 
   return graphql(`
     {
@@ -71,7 +74,7 @@ exports.createPages = ({ actions, graphql }) => {
       categories.forEach(category => {
         createPage({
           path: `/blog/${_.kebabCase(category)}/`,
-          component: blogListTemplate,
+          component: postsByCategory,
           context: {
             category,
             layout: 'blog',
@@ -88,12 +91,26 @@ exports.createPages = ({ actions, graphql }) => {
       let tags = []
       // Iterate through each post, putting all found tags into `tags`
       _.each(posts, edge => {
-        if (_.get(edge, 'node.frontmatter.category')) {
+        if (_.get(edge, 'node.frontmatter.tags')) {
           tags = tags.concat(edge.node.frontmatter.tags)
         }
       })
+
       // Eliminate duplicate tags
       tags = _.uniq(tags)
+
+      // Make tag pages
+      tags.forEach(tag => {
+        createPage({
+          path: `/blog/${_.kebabCase(tag)}`,
+          component: postsByTag,
+          context: {
+            tag,
+            layout: 'blog',
+          },
+        })
+      })
+
       return result
     })
 }
