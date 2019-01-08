@@ -6,7 +6,8 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   display: flex;
   flex: 1;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: #393f4d;
   padding: 0rem 0rem 0rem 0rem;
+  overflow-x: auto;
 }

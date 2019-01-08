@@ -4,7 +4,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 
 .activeLink {
   color: white;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   background-color: #393f4d;
   outline: 0;
   border-width: 2px;
@@ -16,7 +16,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
 
 .link {
   color: black;
-  margin: auto 0.5rem auto 0.5rem;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
   background-color: #feda6a;
   outline: 0;
   border-width: 0;
