@@ -1,0 +1,15 @@
+.container {
+  display: 'flex';
+  flex: 1;
+  margin-top: 5;
+  margin-bottom: 5;
+  margin-left: 5;
+  margin-right: 5;
+  border-width: 2;
+  border-radius: 5;
+  border-color: '#F27777';
+  flex-direction: 'row';
+  justify-content: 'space-around';
+  align-items: 'center';
+}
+

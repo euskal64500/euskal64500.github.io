@@ -1,0 +1,47 @@
+.board {
+  display: 'flex';
+  flex: 1;
+  margin: 2rem 2rem 2rem 2rem;
+  flex-direction: 'column';
+  justify-content: 'space-around';
+  align-content: 'space-around';
+  background-color: green;
+  height: 100%;
+}
+
+.play {
+  display: flex;
+  flex: 6;
+  flex-direction: 'row';
+  justify-content: 'space-around';
+  align-content: 'space-around';
+  background-color: red;
+}
+
+.solution {
+  display: flex;
+  flex: 1;
+  flex-direction: 'row';
+  justify-content: 'space-around';
+  align-content: 'space-around';
+  background-color: purple;
+}
+
+.feedback 
+{ 
+  flex: 1;
+  background-color: blue;
+}
+
+.guess { 
+  flex: 3;
+  background-color: yellow;
+}
+
+.empty { 
+  width: 60;
+}
+
+.shield { 
+  flex: 1;
+}

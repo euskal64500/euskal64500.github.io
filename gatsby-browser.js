@@ -4,9 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 import wrapWithProvider from './wrap-with-provider'
-import './src/css/custom-prism-solarizedlight.css'
+import './src/styles/custom-prism-solarizedlight.css'
 import 'katex/dist/katex.min.css'
 
 const wrapRootElement = wrapWithProvider
 
-export default wrapRootElement
+export { wrapRootElement as default }

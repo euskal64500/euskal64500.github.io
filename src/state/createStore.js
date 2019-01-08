@@ -1,5 +1,24 @@
-import { createStore as reduxCreateStore } from 'redux'
-import website from './reducers'
+// import { createStore as reduxCreateStore } from 'redux'
+// import {
+//   mastermind,
+//   enableBatching,
+// } from '../games/mastermind/reducers/reducers'
 
-const createStore = () => reduxCreateStore(website)
+// const createStore = () => reduxCreateStore(enableBatching(mastermind))
+// export default createStore
+
+import { createStore as reduxCreateStore } from 'redux'
+
+const reducer = (state, action) => {
+  if (action.type === `INCREMENT`) {
+    return Object.assign({}, state, {
+      count: state.count + 1,
+    })
+  }
+  return state
+}
+
+const initialState = { count: 0 }
+
+const createStore = () => reduxCreateStore(reducer, initialState)
 export default createStore
