@@ -3,9 +3,3 @@
  *
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
-
-import wrapWithProvider from './wrap-with-provider'
-
-const wrapRootElement = wrapWithProvider
-
-export { wrapRootElement as default }

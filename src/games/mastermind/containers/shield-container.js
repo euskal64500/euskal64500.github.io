@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { onUnlock } from '../actions'
+import { onUnlock } from '../state/actions'
 import Shield from '../components/shield'
 
 const mapStateToProps = state => ({
