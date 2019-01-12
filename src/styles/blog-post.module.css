@@ -33,6 +33,7 @@ Color scheme dark horse: https://hookagency.com/website-color-schemes/
   margin: auto;
   z-index: inherit 1;
   z-index: inherit;
+  max-width: 180px;
 }
 
 .category {

@@ -2,10 +2,11 @@
 author: "Olivier"
 date: "2018-12-24"
 category: "Software"
-title: "Python blog"
-description: "Python programming"
-cover: "python-logo.png"
-tags: ["python"]
+title: "React-native"
+description: "How to make delicious brioche"
+path: "/blog/software/react-native"
+cover: "./python-logo.png"
+tags: ["mobile", "javascript", "react-native"]
 lang: "en"
 ---
 
@@ -91,4 +92,4 @@ Content Cell | Content Cell
 	}
 
 	var sum = add(num1, num2);
-  
+

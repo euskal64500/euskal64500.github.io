@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.circle {
+  border-width: 2px;
+  border-style: solid;
+  border-color: brown;
+  border-radius: 50%;
+}
+
+.small {
+  composes: circle;
+  width: 10px;
+  height: 10px;
+}
+
+.black {
+  composes: small;
+  background-color: black;
+}
+
+.white {
+  composes: small;
+  background-color: white;
+}
+
+.large {
+  composes: circle;
+  width: 2rem;
+  height: 2rem;
+}
+
+.ivory {
+  composes: large;
+  background-color: ivory;
+}
+
+.gold {
+  composes: large;
+  background-color: gold;
+}
+
+.orange {
+  composes: large;
+  background-color: orange;
+}
+
+.pink {
+  composes: large;
+  background-color: pink;
+}
+
+.tomato {
+  composes: large;
+  background-color: tomato;
+}
+
+.gray {
+  composes: large;
+  background-color: gray;
+}
+
+.green {
+  composes: large;
+  background-color: lightgreen;
+}
+
+.yellow {
+  composes: large;
+  background-color: lightyellow;
+}
+
+.blue {
+  composes: large;
+  background-color: lightblue;
+}
+
+.brown {
+  composes: large;
+  background-color: brown;
+}

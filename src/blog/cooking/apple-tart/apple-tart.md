@@ -3,76 +3,41 @@ author: "Olivier"
 date: "2018-12-24"
 category: "Cooking"
 title: "Apple tarte recipe"
-description: "How to make delicious apple tart"
+description: "Learn how to make this classic delicous dessert that will undoubtely delight your guests"
 cover: "./tarte-aux-pommes.jpg"
 tags: ["apple", "tart", "dessert", "french cuisine"]
 lang: "en"
 ---
 
-# Contemne gaudete horrenda quid videt capiat membra
+Classic delicous dessert that will undoubtely delight your guests. The apple selection is essential to the success of this recipe. Select juicy apples such as Golden Delicious or pink ladies. This recipe uses a light version of the pate brisee without sugar. The dough has to bake for a long time and doughs containing sugar tend to burn before the apples are fully baked. 
 
-## Maternaque sitis ab mediis esset innixa exanimi
+# Ingredients
 
-Lorem markdownum fervore sacraque si quia arces quoque precibus. Qualis usum
-supremis in qui solverat **Lapitheia feris altera** ratem male coniuge. Perseu
-lupi anili et dicere notas. Audisse versasque *calathis que* quod ortu;
-**sedilia vincemus duo** animi postquam, iura rogos.
+## Dough
+- 200g of flour
+- a generous pinch of salt
+- 100g of unsalted butter cut in dice and at room temperature
+- 1 egg yoke
+- 2-3 table spoons of very code water
 
-## Captis facies verba
+## Garnish
+- 4-5 juicy apples peeled and without seeds
+- 3 table spoon of caster sugar
+- 50g of unsalted butter cut in dice
+- 4-6 teaspoons of abricot jam
+- 2 teaspoons of Calvados (French liquor made with apples)
 
-Admissumque inmensos gerat, aestu pigetque poteras, laboribus tormenti illa,
-unus prius vestrae conspexit: demens sunt. Sub tuos reppulit Pirenidas dona. Sic
-dum: tecta suus lente decimo loca mutari, sub sit ut aequoris et libidine sonuit
-falsi, et. Equos quo sedes functa quaecumque vides, in toris hic [fuit
-contenta](http://umquamturbata.net/). Nimium ipsa precando, aquarum numina,
-rapto deus umbrarumque ipse, vince.
+## The dough
 
-## Lynceus serpens Cupido
+Classic method            | steps
+--------------------------|-----
+![](tarte-aux-pommes.jpg) | sift the flour and the salt through a strainer 
+![](tarte-aux-pommes.jpg) | make a hole in the middle with your fist
+![](tarte-aux-pommes.jpg) | Put the butter and the yoke wt mix with the tip of your finger until the mixture looks like scramble eggs
+![](tarte-aux-pommes.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
+![](tarte-aux-pommes.jpg) | Sprinkle the iced water and mix again choping the dough with the spatula
+![](tarte-aux-pommes.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
+![](tarte-aux-pommes.jpg) | Gather the dough and knead it to form a round ball, then flatten it slightly
+![](tarte-aux-pommes.jpg) | Wrap it in a plastic film and put it in the fridge for at least 30mn. Take it out and wait for it to reach room temperature
 
-Incedere mirantia bene ardor quia medio detrusit vitis videri decorum ipsaque
-herbae crepuscula. Ululasse referentia in vana utque ignibus. Signum modis
-Troiae concipias calcare faciat unda lucis certos, pectoraque et mater ad
-Venerem, vox fronti.
-
-    if (master != gate_session_cold) {
-        recursive(pci_disk - bandwidthMemoryViral);
-        pJpegFrozen.ethernet_parity(drop - domain, 2);
-        duplex += memory_crm / recycleDigital(domainSampleApplet,
-                internetNybble, -3);
-    } else {
-        server_warm = maximize;
-        sku(and_scraping);
-        cut(upTag, kindle, java);
-    }
-    var cursor = baseband_lag.eide(4 / disk_touchscreen + boxDrag);
-    aluFatIpad(socket, name(crt, horizontalRoomRead / utfUltraSwitch),
-            extension.scarewareAiff(archive(window_file, terabyte_batch)));
-    switchLeakShift = sample;
-    if (operating - null_click - markup * terabyteParity + jfsHypertext) {
-        web_database_wi.link *= session;
-        matrixAutoresponder += text_blacklist;
-    }
-
-## Scinditque flaventibus pectore inmeritam res Nereides pectoris
-
-Cornua fremida sidere, ducis hinc novo aestu fugit; et utque mundi auxilium,
-casus. Terror exiguis volucri nostri ac dabat hunc agmen ibi quicquid! Lilia sed
-fugae medius exorabilis hunc, tolle sine, **saxo**: mea felici aequore natos
-postquam.
-
-1. Intendit stabit daedalus interea diffudere ut cornu
-2. Suos qua nec
-3. Temporis posse nam errat si pruinae rettulit
-4. Submittere ad paternis sceptro extrahit adunco paludem
-
-## Viro quod
-
-Promisistis fecerat *facitote*. *Est* meis cuspide et ingentibus quondam quoque
-inmurmurat nec, ab.
-
-> Pactae vinco virgineos fine publica dei vel egreditur, erat **ait iuvenes**
-> comes. Vicisti et mihi sed sanguine illa.
-
-Hastilia tori coniuge *mea* boves aut, *cogam concutiens lumina*, si. Requies
-cepisse auribus gratamque aetas fluunt **haec Saeculaque** peregit liquidum, sic
-vigor. De vocis Hippomene.
+## The garnish

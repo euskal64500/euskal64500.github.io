@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import GuessContainer from '../containers/guess-container'
 import style from '../styles/guess-list.module.css'
 
 const GuessList = ({ ids }) => (
   <div className={style.container}>
     {ids.map(id => (
-      <p>{id}</p>
+      <GuessContainer key={id} id={id} />
     ))}
   </div>
 )
