@@ -1,14 +1,43 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import Board from './board'
 import createStore from '../state/createStore'
+import ResultContainer from '../containers/result-container'
+import RoundContainer from '../containers/round-container'
+import Solution from './solution'
+import style from '../styles/mastermind.module.css'
 
 const store = createStore()
 
-const Mastermind = () => (
+const MastermindGame = () => (
   <Provider store={store}>
-    <Board />
+    <div className={style.container}>
+      <ResultContainer row={1} />
+      <RoundContainer row={1} />
+
+      <ResultContainer row={2} />
+      <RoundContainer row={2} />
+
+      <ResultContainer row={3} />
+      <RoundContainer row={3} />
+
+      <ResultContainer row={4} />
+      <RoundContainer row={4} />
+
+      <ResultContainer row={5} />
+      <RoundContainer row={5} />
+
+      <ResultContainer row={6} />
+      <RoundContainer row={6} />
+
+      <ResultContainer row={7} />
+      <RoundContainer row={7} />
+
+      <ResultContainer row={8} />
+      <RoundContainer row={8} />
+
+      <Solution />
+    </div>
   </Provider>
 )
 
-export default Mastermind
+export default MastermindGame

@@ -1,12 +1,12 @@
 import React from 'react'
 import SEO from '../components/seo'
-import Mastermind from '../games/mastermind/components/mastermind'
-import gameStyle from '../styles/game.module.css'
+import style from '../styles/game.module.css'
+import MastermindGame from '../games/mastermind/components/mastermind'
 
 const GamePage = () => (
-  <div className={gameStyle.container}>
+  <div className={style.container}>
     <SEO title="Mastermind" />
-    <Mastermind />
+    <MastermindGame />
   </div>
 )
 
