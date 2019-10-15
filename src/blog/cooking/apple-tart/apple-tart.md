@@ -31,13 +31,13 @@ Classic delicous dessert that will undoubtely delight your guests. The apple sel
 
 Classic method            | steps
 --------------------------|-----
-![](tarte-aux-pommes.jpg) | sift the flour and the salt through a strainer 
-![](tarte-aux-pommes.jpg) | make a hole in the middle with your fist
-![](tarte-aux-pommes.jpg) | Put the butter and the yoke wt mix with the tip of your finger until the mixture looks like scramble eggs
-![](tarte-aux-pommes.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
-![](tarte-aux-pommes.jpg) | Sprinkle the iced water and mix again choping the dough with the spatula
-![](tarte-aux-pommes.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
-![](tarte-aux-pommes.jpg) | Gather the dough and knead it to form a round ball, then flatten it slightly
-![](tarte-aux-pommes.jpg) | Wrap it in a plastic film and put it in the fridge for at least 30mn. Take it out and wait for it to reach room temperature
+![](flour-drainer.jpg) | sift the flour and the salt through a strainer 
+![](dough-making-1.jpg) | make a hole in the middle with your fist
+![](dough-making-1b.jpg) | Put the butter and the yoke wt mix with the tip of your finger until the mixture looks like scramble eggs
+![](dough-making-3.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
+![](dough-making-4.jpg) | Sprinkle the iced water and mix again choping the dough with the spatula
+![](dough-making-5.jpg) | Using a spatula fall in the flour into the mix of butter and egg chopping the mixture to properly incorporate the flour
+![](dough-making6.jpg) | Gather the dough and knead it to form a round ball, then flatten it slightly
+![](dough-wrap.jpg) | Wrap it in a plastic film and put it in the fridge for at least 30mn. Take it out and wait for it to reach room temperature
 
 ## The garnish
