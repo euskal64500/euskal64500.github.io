@@ -96,14 +96,14 @@ const initialPegs = {
 
 const initialGuesses = {
   activeRow: 8,
-  1: { id: 1, complete: false, pegs: [1, 2, 3, 4], focused: false },
-  2: { id: 2, complete: false, pegs: [5, 6, 7, 8], focused: false },
-  3: { id: 3, complete: false, pegs: [9, 10, 11, 12], focused: false },
-  4: { id: 4, complete: false, pegs: [13, 14, 15, 16], focused: false },
-  5: { id: 5, complete: false, pegs: [17, 18, 19, 20], focused: false },
-  6: { id: 6, complete: false, pegs: [21, 22, 23, 24], focused: false },
-  7: { id: 7, complete: false, pegs: [25, 26, 27, 28], focused: false },
-  8: { id: 8, complete: false, pegs: [29, 30, 31, 32], focused: false },
+  1: { id: 1, complete: false, pegs: [1, 2, 3, 4], enable: false },
+  2: { id: 2, complete: false, pegs: [5, 6, 7, 8], enable: false },
+  3: { id: 3, complete: false, pegs: [9, 10, 11, 12], enable: false },
+  4: { id: 4, complete: false, pegs: [13, 14, 15, 16], enable: false },
+  5: { id: 5, complete: false, pegs: [17, 18, 19, 20], enable: false },
+  6: { id: 6, complete: false, pegs: [21, 22, 23, 24], enable: false },
+  7: { id: 7, complete: false, pegs: [25, 26, 27, 28], enable: false },
+  8: { id: 8, complete: false, pegs: [29, 30, 31, 32], enable: true },
 }
 
 const initialFeedbacks = {
@@ -211,12 +211,12 @@ const updateGuess = (state = initialGuesses, action) => {
         ...state,
         activeRow: action.value,
       }
-    case 'CHANGE_FOCUS':
+    case 'UPDATE_ROW_STATUS':
       return {
         ...state,
         [action.id]: {
           ...state[action.id],
-          focused: action.focus,
+          enable: action.enable,
         },
       }
     case 'RESET':
@@ -287,6 +287,7 @@ const updateSolution = (state = initialSolution, action) => {
       }
     case 'RESET':
       return initialSolution
+
     default:
       return state
   }

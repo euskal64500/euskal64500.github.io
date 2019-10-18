@@ -129,10 +129,10 @@ export const reset = () => ({
   type: 'RESET',
 })
 
-export const changeFocus = (rowNum, focused) => ({
-  type: 'CHANGE_FOCUS',
+export const changeRowStatus = (rowNum, enabled) => ({
+  type: 'UPDATE_ROW_STATUS',
   id: rowNum,
-  focus: focused,
+  enable: enabled,
 })
 
 export const updateStatus = outcome => ({
@@ -151,7 +151,11 @@ export const enableRow = rowNum => (dispatch, getState) => {
   const pegIds = state.guesses[rowNum].pegs
   const actions = pegIds.map(i => enablePeg(i))
   dispatch(
-    batchActions(changeActiveRow(rowNum), changeFocus(rowNum, true), ...actions)
+    batchActions(
+      changeActiveRow(rowNum),
+      changeRowStatus(rowNum, true),
+      ...actions
+    )
   )
 }
 
@@ -159,7 +163,7 @@ export const disableRow = rowNum => (dispatch, getState) => {
   const state = getState()
   const pegIds = state.guesses[rowNum].pegs
   const actions = pegIds.map(i => disablePeg(i))
-  dispatch(batchActions(changeFocus(rowNum, false), ...actions))
+  dispatch(batchActions(changeRowStatus(rowNum, false), ...actions))
 }
 
 export const disableCurrentRow = () => (dispatch, getState) => {
@@ -261,12 +265,13 @@ export const isCodeComplete = () => (dispatch, getState) => {
 }
 
 export const onUnlock = () => dispatch => {
-  const incomplete = dispatch(isCodeComplete())
+  // const incomplete = dispatch(isCodeComplete())
+  const incomplete = false
   if (!incomplete) {
     dispatch(disableCurrentRow())
-    dispatch(giveFeedback())
+    // dispatch(giveFeedback())
     dispatch(enableNextRow())
-    dispatch(showSolution())
-    dispatch(showResult())
+    // dispatch(showSolution())
+    // dispatch(showResult())
   }
 }

@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import createStore from '../state/createStore'
 import ResultContainer from '../containers/result-container'
 import RoundContainer from '../containers/round-container'
-import Solution from './solution'
+import SolutionContainer from '../containers/solution-container'
 import style from '../styles/mastermind.module.css'
 
 const store = createStore()
@@ -35,7 +35,8 @@ const MastermindGame = () => (
       <ResultContainer row={8} />
       <RoundContainer row={8} />
 
-      <Solution />
+      <p />
+      <SolutionContainer />
     </div>
   </Provider>
 )

@@ -1,6 +1,17 @@
 .container {
-  grid-column-start: 1;
-  grid-column-end: span 2;
-  border-radius: 5px;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
   background-color: #feda6a;
+  border-radius: 5px;
+}
+
+.lock {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.lock:focus {
+  outline:0 !important;
 }
