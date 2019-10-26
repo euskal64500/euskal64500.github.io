@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -96,4 +95,18 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+To deploy the code, run the command:
+
+```bash
+npm run deploy
+```
+
+The code will be compiled, build and pushed to the master branch of the euskal64500.github.io repository. This can be configured through github. In the repo settings menu, scroll down to "Github Pages" section to select the source if you want to change it.
+
+## Production site
+
+The production / live site is accessible at https://euskal64500.github.io/
+
+## Source code
+
+The source code is stored in the "develop" branch of the repository. PR should be pushed against the develop branch.
