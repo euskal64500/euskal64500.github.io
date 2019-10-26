@@ -160,7 +160,7 @@ const codeGenerator = (level = LEVEL.EASY, palette = COLORS, size = 4) => {
 
 const initialSolution = {
   open: false,
-  code: true ? ['blue', 'pink', 'gold', 'green'] : codeGenerator(),
+  code: true ? ['blue', 'green', 'gold', 'pink'] : codeGenerator(),
 }
 
 const initialGameStatus = {

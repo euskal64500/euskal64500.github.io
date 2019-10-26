@@ -265,13 +265,12 @@ export const isCodeComplete = () => (dispatch, getState) => {
 }
 
 export const onUnlock = () => dispatch => {
-  // const incomplete = dispatch(isCodeComplete())
-  const incomplete = false
+  const incomplete = dispatch(isCodeComplete())
   if (!incomplete) {
     dispatch(disableCurrentRow())
-    // dispatch(giveFeedback())
+    dispatch(giveFeedback())
     dispatch(enableNextRow())
-    // dispatch(showSolution())
-    // dispatch(showResult())
+    dispatch(showSolution())
+    dispatch(showResult())
   }
 }
