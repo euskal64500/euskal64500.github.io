@@ -19,10 +19,10 @@ const BlogTags = () => (
     render={data => (
       <nav className={tagsStyles.nav}>
         {data.categories.distinct.map(category => (
-          <BlogCat category={category} />
+          <BlogCat key={category} category={category} />
         ))}
         {data.tags.distinct.map(tag => (
-          <BlogTag tag={tag} />
+          <BlogTag key={tag} tag={tag} />
         ))}
       </nav>
     )}

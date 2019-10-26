@@ -28,20 +28,13 @@ const BlogPost = ({ category, title, description, cover, slug }) => {
 }
 
 BlogPost.propTypes = {
-  category: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  slug: PropTypes.string,
-  cover: PropTypes.string,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired,
 }
 
-BlogPost.defaultProps = {
-  category: 'Lorem Ipsum',
-  title: 'Lorem Ipsum',
-  slug: '/',
-  cover: '',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-}
+BlogPost.defaultProps = {}
 
 export default BlogPost

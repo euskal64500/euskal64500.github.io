@@ -31,9 +31,11 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-icons": "^3.7.0",
     "react-redux": "^6.0.0",
     "react-typography": "^0.16.18",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "typography": "^0.16.18",
     "typography-theme-bootstrap": "^0.16.18",
     "typography-theme-de-young": "^0.16.18"

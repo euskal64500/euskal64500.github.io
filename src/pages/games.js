@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import SEO from '../components/seo'
+import style from '../styles/game.module.css'
+import MastermindGame from '../games/mastermind/components/mastermind'
 
 const GamePage = () => (
-  <div>
-    <SEO title="Page two" />
-    <h1>Hi from the game page</h1>
-    <p>Welcome to game page</p>
-    <Link to="/">Go back to the homepage</Link>
+  <div className={style.container}>
+    <SEO title="Mastermind" />
+    <MastermindGame />
   </div>
 )
 

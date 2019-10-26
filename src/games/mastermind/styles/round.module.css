@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #feda6a;
+  border-radius: 5px;
+}

@@ -1,0 +1,91 @@
+.circle {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.circle:focus {
+  outline: 0;
+}
+
+.small {
+  composes: circle;
+  width: 18px;
+  height: 18px;
+}
+
+.large {
+  composes: circle;
+  width: 40px;
+  height: 40px;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+.ivory {
+  background-color: ivory;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.tomato {
+  background-color: tomato;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.yellow {
+  background-color: lightyellow;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+
+.brownBorder {
+  border-color: brown;
+}
+
+.blackBorder {
+  border-color: black;
+}
+
+.grayBorder {
+  border-color: #393f4d;
+}
+
+
+.noBorder {
+  border-color: transparent;
+}

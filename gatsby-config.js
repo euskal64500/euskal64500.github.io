@@ -119,7 +119,7 @@ module.exports = {
         component: require.resolve(`./src/components/layout.js`),
       },
     },
-    `gatsby-plugin-eslint`,
+    // `gatsby-plugin-eslint`,
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-google-analytics`,

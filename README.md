@@ -29,8 +29,10 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```sh
     cd my-default-starter/
-    gatsby develop
+   npm start
     ```
+
+    Note: "npm start" will internally call "gatsby develop"
 
 1.  **Open the source code and start editing!**
 
