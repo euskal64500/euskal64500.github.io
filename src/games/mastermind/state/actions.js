@@ -219,6 +219,7 @@ export const giveFeedback = () => (dispatch, getState) => {
   if (isSolved) {
     dispatch(updateStatus('success'))
   }
+  return isSolved
 }
 
 export const showSolution = () => (dispatch, getState) => {
@@ -266,10 +267,15 @@ export const isCodeComplete = () => (dispatch, getState) => {
 
 export const onUnlock = () => dispatch => {
   const incomplete = dispatch(isCodeComplete())
+  let isSolved = false
+
   if (!incomplete) {
     dispatch(disableCurrentRow())
     dispatch(giveFeedback())
-    dispatch(enableNextRow())
+    isSolved = dispatch(enableNextRow())
+  }
+
+  if (isSolved) {
     dispatch(showSolution())
     dispatch(showResult())
   }
